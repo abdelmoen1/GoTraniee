@@ -6,4 +6,4 @@ use App\Http\Controllers\Auth\StudentRegisterController;
 use App\Http\Controllers\Auth\GoogleAuthController;
 
 Route::post('/register/student',[StudentRegisterController::class , 'register']);
-Route::post('/auth/google',[GoogleAuthController::class , 'authenticate']);
+Route::post('/auth/google',[GoogleAuthController::class , 'redirect']);

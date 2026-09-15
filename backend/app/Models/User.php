@@ -7,16 +7,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
     /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
      */
     protected $fillable = [
+        'google_id',
         'name',
         'email',
         'role',
@@ -44,7 +46,7 @@ use HasApiTokens, HasFactory, Notifiable;
             'password' => 'hashed',
         ];
     }
-        public function studentProfile()
+    public function studentProfile()
     {
         return $this->hasOne(StudentProfile::class);
     }
