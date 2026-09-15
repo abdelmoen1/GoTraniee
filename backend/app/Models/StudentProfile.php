@@ -9,8 +9,10 @@ class StudentProfile extends Model
     protected $fillable = [
     'user_id',
     'bio',
-    'availability',
     'status',
+    'university',
+    'academic_major',
+    'specialization'
 ];
     public function user()
     {

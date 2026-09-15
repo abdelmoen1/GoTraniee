@@ -19,8 +19,8 @@ use HasApiTokens, HasFactory, Notifiable;
     protected $fillable = [
         'name',
         'email',
-        'password',
         'role',
+        'password',
     ];
 
     /**
@@ -30,7 +30,6 @@ use HasApiTokens, HasFactory, Notifiable;
      */
     protected $hidden = [
         'password',
-        'remember_token',
     ];
 
     /**
